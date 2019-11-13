@@ -1,11 +1,72 @@
  Scanner leer = new Scanner(System.in);
-             int op;
+             int op,i,n,uno,dos,tres,cuatro,cinco,seis,siete,ocho,nueve,g,j1,j2;
+             String nombre1;
+             String nombre2;
+             String n1;
+             String n2;
+             String n3;
+             String n4;
+             String n5;
+             String n6;
+             String n7;
+             String n8;
+             String n9;
              JOptionPane.showMessageDialog(null,"Bienvenido usuario, escoga una de las siguientes opciones:");
              op = Integer.parseInt(JOptionPane.showInputDialog("1.Triqui\n2.Punto Faman\n3.Funciones trigonometricas\n4.Clave de número\n5.Salir"));
         switch(op){
            case 1:
-               
+               j1=0;
+               j2=0;
+               g=0;
+               uno=0;
+               dos=0;
+               tres=0;
+               cuatro=0;
+               cinco=0;
+               seis=0;
+               siete=0;
+               ocho=0;
+               nueve=0;
+               n1=" ";
+               n2=" ";
+               n3=" ";
+               n4=" ";
+               n5=" ";
+               n6=" ";
+               n7=" ";
+               n8=" ";
+               n9=" ";
+               JOptionPane.showMessageDialog(null,"Bienvenidos a triqui");
+               JOptionPane.showMessageDialog(null,"Reglas:\n1. El tabero esta visualisado de la siguiete manera \n ---------------------- \n |   1   |   2   |   3   | \n ---------------------- \n |   4   |   5   |   6   | \n ---------------------- \n |   7   |   8   |   9   | \n ----------------------");
+               JOptionPane.showMessageDialog(null,"2. El jugador 1 es las X y el jugador 2 es las O. \n3. Cuando sea su respectivo turno indique el numero de la casilla en la cual quiera realizar su movmiento \n4. El jugador uno tiene e primer movimiento \n5. Cuand un ugador realiza un movimiento en una casilla, esa casilla ya no estara disponible para realia mas moimientos \n6. Gana el jugador que tenga 3 de sus signos alineados \n7. Si El tablero se queda sin espacios dispoibles el jego termina en empate");
+               nombre1 = JOptionPane.showInputDialog("Ingrese el nombre del jugador numero 1:");
+               nombre2 = JOptionPane.showInputDialog("Ingrese el nombre del jugador numero 2:");
+               JOptionPane.showMessageDialog(null,"Empecemos!!!!");
+               while(!(uno==dos&&dos==tres&&uno!=0)&&!(cuatro==cinco&&cinco==seis&&cuatro!=0)&&!(siete==ocho&&ocho==nueve&&ocho!=0)&&!(uno==cuatro&&cuatro==siete&&uno!=0)&&!(cinco==dos&&dos==ocho&&dos!=0)&&!(seis==nueve&&seis==tres&&tres!=0)&&!(uno==cinco&&nueve==uno&&uno!=0)&&!(siete==cinco&&cinco==tres&&tres!=0)&&(uno==0||dos==0||tres==0||cuatro==0||cinco==0||seis==0||siete==0||ocho==0||nueve==0)){
+                   
+                   switch(j1){
+                       case 1:
+                           break;
+                       case 2:
+                           break;
+                       case 3:
+                            break;
+                       case 4:
+                           break;
+                       case 5:
+                           break;
+                       case 6:
+                            break;
+                       case 7:
+                            break;
+                       case 8:
+                            break;
+                       case 9:
+                           break;           
+                   }
+               }
                break;
+               
            case 2:
                
            break;
@@ -21,4 +82,3 @@
            default:
                JOptionPane.showMessageDialog(null,"La opcion ingresada no existe, porfavor reinicie el programa.");
     }
-    
