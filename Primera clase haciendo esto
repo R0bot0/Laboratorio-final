@@ -1,4 +1,4 @@
- Scanner leer = new Scanner(System.in);
+         Scanner leer = new Scanner(System.in);
              int op,i,n,uno,dos,tres,cuatro,cinco,seis,siete,ocho,nueve,g,j1,j2;
              String nombre1;
              String nombre2;
@@ -15,8 +15,6 @@
              op = Integer.parseInt(JOptionPane.showInputDialog("1.Triqui\n2.Punto Faman\n3.Funciones trigonometricas\n4.Clave de número\n5.Salir"));
         switch(op){
            case 1:
-               j1=0;
-               j2=0;
                g=0;
                uno=0;
                dos=0;
@@ -43,30 +41,110 @@
                nombre2 = JOptionPane.showInputDialog("Ingrese el nombre del jugador numero 2:");
                JOptionPane.showMessageDialog(null,"Empecemos!!!!");
                while(!(uno==dos&&dos==tres&&uno!=0)&&!(cuatro==cinco&&cinco==seis&&cuatro!=0)&&!(siete==ocho&&ocho==nueve&&ocho!=0)&&!(uno==cuatro&&cuatro==siete&&uno!=0)&&!(cinco==dos&&dos==ocho&&dos!=0)&&!(seis==nueve&&seis==tres&&tres!=0)&&!(uno==cinco&&nueve==uno&&uno!=0)&&!(siete==cinco&&cinco==tres&&tres!=0)&&(uno==0||dos==0||tres==0||cuatro==0||cinco==0||seis==0||siete==0||ocho==0||nueve==0)){
-                   
+                   j1=0;
+                   while(j1<1||(j1==1&&uno!=0)||(j1==2&&dos!=0)||(j1==3&&tres!=0)||(j1==4&&cuatro!=0)||(j1==5&&cinco!=0)||(j1==6&&seis!=0)||(j1==7&&siete!=0)||(j1==8&&ocho!=0)||(j1==9&&nueve!=0)||j1>9){    
+                   j1=Integer.parseInt(JOptionPane.showInputDialog(nombre1+", escoge la casilla en la cual quiera realizar su movimiento: \n ---------------------- \n |   "+n1+"   |   "+n2+"   |   "+n3+"   | \n ---------------------- \n |   "+n4+"   |   "+n5+"   |   "+n6+"   | \n ---------------------- \n |   "+n7+"   |   "+n8+"   |   "+n9+"   | \n ----------------------"));
+                   if(j1<1||(j1==1&&uno!=0)||(j1==2&&dos!=0)||(j1==3&&tres!=0)||(j1==4&&cuatro!=0)||(j1==5&&cinco!=0)||(j1==6&&seis!=0)||(j1==7&&siete!=0)||(j1==8&&ocho!=0)||(j1==9&&nueve!=0)||j1>9){
+                       JOptionPane.showMessageDialog(null,"El valor ingresado no es valido, porfavor intentelo de nuevo");
+                   }
+                   }
                    switch(j1){
                        case 1:
+                           n1="X";
+                           uno=1;
                            break;
                        case 2:
+                           n2="X";
+                           dos=1;
                            break;
                        case 3:
+                           n3="X";
+                           tres=1;
                             break;
                        case 4:
+                           n4="X";
+                           cuatro=1;
                            break;
                        case 5:
+                           n5="X";
+                           cinco=1;
                            break;
                        case 6:
+                           n6="X";
+                           seis=1;
                             break;
                        case 7:
+                           n7="X";
+                           siete=1;
                             break;
                        case 8:
+                           n8="X";
+                           ocho=1;
                             break;
                        case 9:
+                           n9="X";
+                           nueve=1;
                            break;           
                    }
+                   if((uno==dos&&dos==tres&&uno==1)||(cuatro==cinco&&cinco==seis&&cuatro==1)||(siete==ocho&&ocho==nueve&&ocho==1)||(uno==cuatro&&cuatro==siete&&uno==1)||(cinco==dos&&dos==ocho&&dos==1)||(seis==nueve&&seis==tres&&tres==1)||(uno==cinco&&nueve==uno&&uno==1)||(siete==cinco&&cinco==tres&&tres==1)){
+                       JOptionPane.showMessageDialog(null,nombre1+" ha ganado, FELICIDADES!!!!!!!! \n ---------------------- \n |   "+n1+"   |   "+n2+"   |   "+n3+"   | \n ---------------------- \n |   "+n4+"   |   "+n5+"   |   "+n6+"   | \n ---------------------- \n |   "+n7+"   |   "+n8+"   |   "+n9+"   | \n ----------------------");
+                   }else{
+                       j2=0;
+                   while(j2<1||(j2==1&&uno!=0)||(j2==2&&dos!=0)||(j2==3&&tres!=0)||(j2==4&&cuatro!=0)||(j2==5&&cinco!=0)||(j2==6&&seis!=0)||(j2==7&&siete!=0)||(j2==8&&ocho!=0)||(j2==9&&nueve!=0)||j2>9){    
+                   j2=Integer.parseInt(JOptionPane.showInputDialog(nombre2+", escoge la casilla en la cual quiera realizar su movimiento: \n ---------------------- \n |   "+n1+"   |   "+n2+"   |   "+n3+"   | \n ---------------------- \n |   "+n4+"   |   "+n5+"   |   "+n6+"   | \n ---------------------- \n |   "+n7+"   |   "+n8+"   |   "+n9+"   | \n ----------------------"));
+                   if(j2<1||(j2==1&&uno!=0)||(j2==2&&dos!=0)||(j2==3&&tres!=0)||(j2==4&&cuatro!=0)||(j2==5&&cinco!=0)||(j2==6&&seis!=0)||(j2==7&&siete!=0)||(j2==8&&ocho!=0)||(j2==9&&nueve!=0)||j2>9){
+                       JOptionPane.showMessageDialog(null,"El valor ingresado no es valido, porfavor intentelo de nuevo");
+                   }
+                   }
+                   switch(j2){
+                       case 1:
+                           n1="O";
+                           uno=2;
+                           break;
+                       case 2:
+                           n2="O";
+                           dos=2;
+                           break;
+                       case 3:
+                           n3="O";
+                           tres=2;
+                            break;
+                       case 4:
+                           n4="O";
+                           cuatro=2;
+                           break;
+                       case 5:
+                           n5="O";
+                           cinco=2;
+                           break;
+                       case 6:
+                           n6="O";
+                           seis=2;
+                            break;
+                       case 7:
+                           n7="O";
+                           siete=2;
+                            break;
+                       case 8:
+                           n8="O";
+                           ocho=2;
+                            break;
+                       case 9:
+                           n9="O";
+                           nueve=2;
+                           break;           
+                   }
+                   if((uno==dos&&dos==tres&&uno==2)||(cuatro==cinco&&cinco==seis&&cuatro==2)||(siete==ocho&&ocho==nueve&&ocho==2)||(uno==cuatro&&cuatro==siete&&uno==2)||(cinco==dos&&dos==ocho&&dos==2)||(seis==nueve&&seis==tres&&tres==2)||(uno==cinco&&nueve==uno&&uno==2)||(siete==cinco&&cinco==tres&&tres==2)){
+                       JOptionPane.showMessageDialog(null,nombre2+" ha ganado, FELICIDADES!!!!!!!! \n ---------------------- \n |   "+n1+"   |   "+n2+"   |   "+n3+"   | \n ---------------------- \n |   "+n4+"   |   "+n5+"   |   "+n6+"   | \n ---------------------- \n |   "+n7+"   |   "+n8+"   |   "+n9+"   | \n ----------------------");
+                   }else{
+                       if(!(uno==0||dos==0||tres==0||cuatro==0||cinco==0||seis==0||siete==0||ocho==0||nueve==0)){
+                           JOptionPane.showMessageDialog(null,"EMPATE \n ---------------------- \n |   "+n1+"   |   "+n2+"   |   "+n3+"   | \n ---------------------- \n |   "+n4+"   |   "+n5+"   |   "+n6+"   | \n ---------------------- \n |   "+n7+"   |   "+n8+"   |   "+n9+"   | \n ----------------------");
+                       }
+                   }
+                   }
                }
+               JOptionPane.showMessageDialog(null,"Gracias usar este programa… ADIOS!!!!!!!!!");
                break;
-               
            case 2:
                
            break;
